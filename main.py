@@ -7,7 +7,7 @@ def choice():
     while to_scrape != "1" and to_scrape != "2":
         counter += 1
         if counter == 5:
-            raise "Invalid input!"
+            raise ValueError("Invalid input!")
         to_scrape = input(str("The answer is not valid. Please type '1' or '2':"))
     print()
     return to_scrape
