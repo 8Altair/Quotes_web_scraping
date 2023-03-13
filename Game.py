@@ -77,14 +77,14 @@ def again():
         exit(0)
 
 
-def play_game(to_scrape="1"):
+def play_game(to_scrape):
     """
     This function starts the game and asks the user to guess the author of a random quote.
     """
 
     if to_scrape.lower() == "2" and os.path.exists("Quotes.pickle"):
         try:
-            with open('quotes.pickle', 'rb') as file:
+            with open('Quotes.pickle', 'rb') as file:
                 quotes = load(file)
         except FileNotFoundError:
             print("Error: Quotes.pickle not found. Scraping website instead.")
@@ -94,7 +94,7 @@ def play_game(to_scrape="1"):
             quotes = scrape_quotes()
     else:
         quotes = scrape_quotes()
-        with open('quotes.pickle', 'wb') as file:
+        with open('Quotes.pickle', 'wb') as file:
             dump(quotes, file)
 
     if not quotes:
