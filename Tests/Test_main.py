@@ -3,7 +3,7 @@ from main import choice
 
 
 @pytest.mark.parametrize("test_input, expected_output", [("1", "1"), ("2", "2")])
-def test_choice(monkeypatch, test_input, expected_output):
+def test_choice_valid_input(monkeypatch, test_input, expected_output):
     monkeypatch.setattr('builtins.input', lambda _: "1")
     assert choice() == "1"
 
