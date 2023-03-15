@@ -4,7 +4,7 @@ import requests as req
 from bs4 import BeautifulSoup as BS
 
 
-def scrape_quotes():
+def scrape_quotes() -> list:
     """
     This function scrapes the website for quotes and returns a list of dictionaries,
     where each dictionary contains the quote text, the name of the person who said the quote,

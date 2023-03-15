@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup as BS
 from Scrape_quotes import scrape_quotes
 
 
-def get_hint(bio_link):
+def get_hint(bio_link) -> str:
     """
     This function takes a bio link and returns a hint about the author's birthdate and location.
     """
@@ -23,7 +23,7 @@ def get_hint(bio_link):
         exit(1)
 
 
-def initializing(quotes):
+def initializing(quotes) -> tuple:
     """
         Initializes the game by randomly selecting a quote from the provided list of quotes,
         selecting the corresponding author and a list of hints, and returning all necessary
@@ -65,7 +65,7 @@ def initializing(quotes):
         raise error
 
 
-def again():
+def again() -> None:
     """
         This function asks the user if they want to play the game again and exits the program if the answer is 'n'.
     """
@@ -77,7 +77,7 @@ def again():
         exit(0)
 
 
-def play_game(to_scrape):
+def play_game(to_scrape) -> None:
     """
     This function starts the game and asks the user to guess the author of a random quote.
     """
