@@ -1,4 +1,4 @@
-Quote Scraper
+# Quote Scraper
 This is a simple Python program that scrapes quotes from a website and stores them in a list of dictionaries.
 Each dictionary contains the quote text, the name of the person who said the quote, and the href of the link
 to the person's bio.
@@ -10,9 +10,7 @@ Python 3.x
 requests library
 beautifulsoup4 library
 pytest library (for running tests)
-You can install these libraries using pip by running:
 
-pip install requests beautifulsoup4 pytest
 Usage
 To use this program, simply run the main.py file using Python:
 
